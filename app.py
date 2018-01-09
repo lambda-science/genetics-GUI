@@ -11,6 +11,7 @@ from src.dnaConv import *
 
 
 root = Tk()
+root.title("GUI-Genetics - Harajuku")
 
 menuBar = windowMenuBar(root)
 menuBar.grid()
