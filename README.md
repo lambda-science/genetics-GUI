@@ -11,5 +11,5 @@ python app.py
 ```
 (python3)
 
-### Screenshot
+### Screenshot (with test.fasta)
 ![Screenshot of the Application](https://i.imgur.com/n7Ohe4A.png)
