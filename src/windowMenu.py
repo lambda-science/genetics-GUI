@@ -35,6 +35,7 @@ class windowMenuBar(Frame):
 
 	def showCodonTable(self):
 		self.codonWindow = Toplevel(self)
+		self.codonWindow.title("Codon Table")
 		self.codonTable = Label(self.codonWindow, text="""
 TTT F Phe      TCT S Ser      TAT Y Tyr      TGT C Cys  
 TTC F Phe      TCC S Ser      TAC Y Tyr      TGC C Cys  
