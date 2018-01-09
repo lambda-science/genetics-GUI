@@ -1,10 +1,13 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 from tkinter import *
-from windowMenu import *
-from dnaPresentator import *
-from dnaGen import *
-from dnaTranslation import *
-from nucleotidCounter import *
-from dnaConv import *
+from src.windowMenu import *
+from src.dnaPresentator import *
+from src.dnaGen import *
+from src.dnaTranslation import *
+from src.nucleotidCounter import *
+from src.dnaConv import *
 
 
 root = Tk()
@@ -12,26 +15,26 @@ root = Tk()
 menuBar = windowMenuBar(root)
 menuBar.grid()
 
-frameFirst = Frame()
-frameFirst.grid(row=0)
-dnaGen = dnaGen(frameFirst)
-nucCount = nucCounter(frameFirst)
+frameDnaGen = Frame()
+frameDnaGen.grid(row=0)
+dnaGen = dnaGen(frameDnaGen)
+nucCount = nucCounter(frameDnaGen)
 dnaGen.grid(row=0)
 nucCount.grid(row=0, column=1)
 
-frameTop = Frame()
-frameTop.grid(row=1)
-dnaPresenter = dnaPresentator(frameTop)
+frameDnaPresenter = Frame()
+frameDnaPresenter.grid(row=1)
+dnaPresenter = dnaPresentator(frameDnaPresenter)
 dnaPresenter.grid(row=0)
 
-frameConv = Frame()
-frameConv.grid(row=2)
-dnaConv = dnaConv(frameConv)
+frameDnaConv = Frame()
+frameDnaConv.grid(row=2)
+dnaConv = dnaConv(frameDnaConv)
 dnaConv.grid(row=0)
 
-frameThird=Frame()
-frameThird.grid(row=3, sticky=N+S+E+W)
-dnaTrans = dnaTrans(frameThird)
+frameProt=Frame()
+frameProt.grid(row=3, sticky=N+S+E+W)
+dnaTrans = dnaTrans(frameProt)
 dnaTrans.grid(row=0)
 
 root.bind_all("<<newDNA>>", dnaPresenter.newDNA)
