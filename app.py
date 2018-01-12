@@ -3,7 +3,7 @@
 
 from tkinter import *
 from src.windowMenu import *
-from src.dnaPresentator import *
+from src.dnaPresenter import *
 from src.dnaGen import *
 from src.dnaTranslation import *
 from src.nucleotidCounter import *
@@ -25,7 +25,7 @@ nucCount.grid(row=0, column=1)
 
 frameDnaPresenter = Frame()
 frameDnaPresenter.grid(row=1)
-dnaPresenter = dnaPresentator(frameDnaPresenter)
+dnaPresenter = dnaPresenter(frameDnaPresenter)
 dnaPresenter.grid(row=0)
 
 frameDnaConv = Frame()
