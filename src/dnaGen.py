@@ -33,6 +33,7 @@ class dnaGen(Frame):
 		gen.grid(column=0, row=0)
 
 	def generate(self, size):
+		""" Function that generate a random DNA sequence, generate newDNA event"""
 		s = []
 		adn =["A","T","C","G"]
 		for i in range(size.get()):
@@ -44,12 +45,14 @@ class dnaGen(Frame):
 		return self.seq 
 
 	def valideCmd(self, a):
+		"""Function made to verify if the entry is a number"""
 		if a.isdigit():
 			return True
 		else:
 			return False
 
 	def invalideCmd(self, a):
+		""" Generate a windows error box if the entry is not a number"""
 		t = Toplevel(self)
 		Label(t, text="Erreur: entrée invalide").pack()
 		Button(t, text="OK", command=t.destroy).pack()

@@ -83,7 +83,9 @@ class dnaTrans(Frame):
 	'TAC':['Y','Tyr'], 'TAT':['Y','Tyr'], 'TAA':['*','***'], 'TAG':['*','***'],
 	'TGC':['C','Cys'], 'TGT':['C','Cys'], 'TGA':['*','***'], 'TGG':['W','Trp']
 	}
+	# Cut the sequence into 3 leters codons
 		sequenceCodon = [ sequence[j:j+3] for j in range(cadre.get(), len(sequence), 3) ]
+	# Find corresponding amino acid for each codons
 		sequenceProteine = [ codontable[i][lettre.get()] for i in sequenceCodon if i in codontable ]
 		if lettre.get() == 0:
 			return ''.join(sequenceProteine)

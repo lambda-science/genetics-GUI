@@ -70,12 +70,15 @@ GTG V Val      GCG A Ala      GAG E Glu      GGG G Gly""")
 		return self.seq
 
 	def fastaConvert(self, fastaString):
-	    endLineIndex = fastaString.index('\n')
-	    title = fastaString[:endLineIndex]
-	    sequence = fastaString[endLineIndex+1:]
-	    sequence = sequence.replace("\n", "");
-	    sequence = sequence.replace("\r", "");
-	    return [title, sequence]
+		"""Function that read the fasta file content and clean every \n or unwanted
+		chars. Also extract the title of the file.
+		Return a list: index 0: the fasta file title, index 1: the cleaned-content in string form"""
+		endLineIndex = fastaString.index('\n')
+		title = fastaString[:endLineIndex]
+		sequence = fastaString[endLineIndex+1:]
+		sequence = sequence.replace("\n", "");
+		sequence = sequence.replace("\r", "");
+		return [title, sequence]
 
 	def exit(self):
 		showinfo("Alerte","Je quitte l'application")
